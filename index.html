@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EC</title>
+    <!-- icon of the website -->
+    <link rel="icon" href="images/small_images/logo_page.png" />
+    <!-- google font (source sans pro) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- normalize css file -->
+    <link rel="stylesheet" href="css/normalize.css" />
+    <!-- all min css file -->
+    <link rel="stylesheet" href="css/all.min.css" />
+    <!-- style css file (main file) -->
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- title css file (components) -->
+    <link rel="stylesheet" href="css/components.css" />
+    <!-- search Icon css file -->
+    <!-- <link rel="stylesheet" href="css/searchIcon.css" /> -->
+    <!-- jQuery -->
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <!-- start header -->
+    <header>
+      <div class="container">
+        <a href="#" class="logo">
+          <img src="images/small_images/logo_page.png" alt="logo" />
+        </a>
+        <nav>
+          <i class="fas fa-bars menu"></i>
+          <ul>
+            <!-- <li><a class="active" href="#">Home</a></li> -->
+            <li><a href="#products" class="active">Products</a></li>
+            <li><a href="#portfolio">Pc</a></li>
+            <li><a href="#portfolio">Phones</a></li>
+            <li><a href="#portfolio">SmartWatch</a></li>
+            <li><a href="#portfolio">AirPods</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+          <div class="search">
+            <i class="fa-solid fa-magnifying-glass" id="searchIcon"></i>
+            <div class="input-button" id="inputButton">
+              <input
+                id="searchInput"
+                type="text"
+                placeholder="Chercher par la Categorie..."
+              />
+              <button id="searchButton" class="search-button">Search</button>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- end header -->
+    <!-- --- --- --- -->
+    <!-- start landing -->
+    <div class="landing" id="landing">
+      <div class="overlay" id="overlay">
+        <div class="text" id="textLanding">
+          <!--  -->
+          <div class="content-one" id="first-content">
+            <h2 id="test">
+              <span class="one">Dear Customers</span> <br />
+              <span class="two">We hope that u'll find what do u want.</span>
+            </h2>
+            <p>
+              Our Products, <br />
+              Laptops, Phones (android and ios), SmartWatches, AirPods. and you
+              will find more informations about our proucts by going to the
+              section of products
+            </p>
+          </div>
+          <!--  -->
+          <div class="content-two" id="main-content">
+            <h2 id="test">
+              <span class="one">Dear Customers</span> <br />
+              <span class="two">We hope that u'll find what do u want.</span>
+            </h2>
+            <p>
+              this e-commerce website is not like every other e-commerce
+              websites, because here you will find the top products with high
+              quality, good price and a lot of features you will find it while
+              you are scrolling, ENJOY!
+            </p>
+          </div>
+        </div>
+      </div>
+      <i class="fas fa-angle-left change-background fa-2x" id="angleLeft"></i>
+      <i class="fas fa-angle-right change-background fa-2x" id="angleRight"></i>
+      <!-- bullet for the section li katbdl -->
+      <ul class="bullets-section">
+        <li id="firstBulletSection"></li>
+        <li id="secondBulletSection" class="active"></li>
+      </ul>
+      <!-- scrolling uup buuutton -->
+      <div class="button">
+        <button id="up-button">Up</button>
+      </div>
+    </div>
+    <!-- end landing section -->
+    <!-- --- --- --- -->
+    <!-- start products section -->
+    <div class="products" id="products">
+      <div class="container">
+        <div class="main-heading">
+          <h2>Products</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto
+            ipsum, consequuntur nobis enim eaque dicta, illum, fugit iure esse
+            hic in voluptatum
+          </p>
+        </div>
+        <div class="products-container">
+          <!-- box 1 -->
+          <div class="prd-box">
+            <i class="fa-solid fa-laptop fa-3x"></i>
+            <div class="text">
+              <h3>Laptops</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque
+                officia ratione nobis dolores odit voluptatem quia distinctio
+                magni consequatur.
+              </p>
+            </div>
+          </div>
+          <!-- box 2 -->
+          <div class="prd-box">
+            <i class="fa-solid fa-mobile-screen-button fa-3x"></i>
+            <div class="text">
+              <h3>Phones</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque
+                officia ratione nobis dolores odit voluptatem quia distinctio
+                magni consequatur.
+              </p>
+            </div>
+          </div>
+          <!-- box 3 -->
+          <div class="prd-box">
+            <i class="fa-solid fa-clock fa-3x"></i>
+            <div class="text">
+              <h3>SmartWatches</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque
+                officia ratione nobis dolores odit voluptatem quia distinctio
+                magni consequatur.
+              </p>
+            </div>
+          </div>
+          <!-- box 4 -->
+          <div class="prd-box">
+            <i class="fa-solid fa-headphones fa-3x"></i>
+            <div class="text">
+              <h3>AirPods</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque
+                officia ratione nobis dolores odit voluptatem quia distinctio
+                magni consequatur.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end products section -->
+    <!-- --- --- --- -->
+    <!-- start design section -->
+    <div class="design">
+      <div class="image">
+        <img src="images/normal_images/LAST.png" alt="design" />
+      </div>
+      <div class="text">
+        <h2>Our Design Comes With...</h2>
+        <ul>
+          <li>Responsive Design</li>
+          <li>Modern and Clean Design</li>
+          <li>Clean Code</li>
+          <li>Broweser Friendly</li>
+        </ul>
+      </div>
+    </div>
+    <!-- end design section -->
+    <!-- --- --- --- -->
+    <!-- start portfolio section -->
+    <div class="portfolio" id="portfolio">
+      <div class="container">
+        <div class="main-heading">
+          <h2>Portfolio</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto
+            ipsum, consequuntur nobis enim eaque dicta, illum, fugit iure esse
+            hic in voluptatum
+          </p>
+        </div>
+        <!--  -->
+        <ul class="shuffle">
+          <li id="pc-shuffle" class="active">PC</li>
+          <li id="phones-shuffle">Phones</li>
+          <li id="smartwatches-shuffle">SmartWatches</li>
+          <li id="airpods-shuffle">AirPods</li>
+        </ul>
+      </div>
+      <!--  -->
+      <div class="pics-container">
+        <!-- img 1 -->
+        <div class="box" id="BOX1">
+          <img src="images/normal_images/pc1.jpg" id="img1-pc" />
+          <img src="images/normal_images/phone5.jpg" id="img1-phone" />
+          <img
+            src="images/normal_images/smartWatch1.jpg"
+            id="img1-smartWatch"
+          />
+          <img src="images/normal_images/airpods1.jpg" id="img1-airPods" />
+
+          <div class="caption">
+            <h4>Awesome Image</h4>
+            <p id="p-pc1">PC</p>
+            <p id="p-phone1">Phones</p>
+            <p id="p-smartWatch1">SmartWatches</p>
+            <p id="p-airPods1">AirPods</p>
+          </div>
+        </div>
+        <!-- img 2 -->
+        <div class="box">
+          <img src="images/normal_images/pc2.jpg" id="img2-pc" />
+          <img src="images/normal_images/phone2.jpg" id="img2-phone" />
+          <img
+            src="images/normal_images/smartWatch2.jpg"
+            id="img2-smartWatch"
+          />
+          <img src="images/normal_images/airpods5.jpg" id="img2-airPods" />
+
+          <div class="caption">
+            <h4>Awesome Image</h4>
+            <p id="p-pc2">PC</p>
+            <p id="p-phone2">Phones</p>
+            <p id="p-smartWatch2">SmartWatches</p>
+            <p id="p-airPods2">AirPods</p>
+          </div>
+        </div>
+        <!-- img 3 -->
+        <div class="box">
+          <img src="images/normal_images/pc3.jpg" id="img3-pc" />
+          <img src="images/normal_images/phone3.jpg" id="img3-phone" />
+          <img
+            src="images/normal_images//smartWatch3.jpg"
+            id="img3-smartWatch"
+          />
+          <img src="images/normal_images/airpods3.jpg" id="img3-airPods" />
+
+          <div class="caption">
+            <h4>Awesome Image</h4>
+            <p id="p-pc3">PC</p>
+            <p id="p-phone3">Phones</p>
+            <p id="p-smartWatch3">SmartWatches</p>
+            <p id="p-airPods3">AirPods</p>
+          </div>
+        </div>
+        <!-- img 4 -->
+        <div class="box">
+          <img src="images/normal_images/pc4.jpg" id="img4-pc" />
+          <img src="images/normal_images/phone4.jpg" id="img4-phone" />
+          <img
+            src="images/normal_images/smartWatch4.jpg"
+            id="img4-smartWatch"
+          />
+          <img src="images/normal_images/airpods5.jpg" id="img4-airPods" />
+
+          <div class="caption">
+            <h4>Awesome Image</h4>
+            <p id="p-pc4">PC</p>
+            <p id="p-phone4">Phones</p>
+            <p id="p-smartWatch4">SmartWatches</p>
+            <p id="p-airPods4">AirPods</p>
+          </div>
+        </div>
+        <!-- img 5 -->
+        <div class="box">
+          <img src="images/normal_images/black.jpg" id="img5-pc" />
+          <img src="images/normal_images/blackBlue.jpg" id="img5-phone" />
+          <img src="images/normal_images/black.jpg" id="img5-smartWatch" />
+          <img src="images/normal_images/blackBlue.jpg" id="img5-airPods" />
+
+          <div class="caption">
+            <h4>Awesome Image</h4>
+            <p id="p-pc5">PC</p>
+            <p id="p-phone5">Phones</p>
+            <p id="p-smartWatch5">SmartWatches</p>
+            <p id="p-airPods5">AirPods</p>
+          </div>
+        </div>
+        <!-- img 6 -->
+        <div class="box">
+          <img src="images/normal_images/black.jpg" id="img6-pc" />
+          <img src="images/normal_images/blackBlue.jpg" id="img6-phone" />
+          <img src="images/normal_images/black.jpg" id="img6-smartWatch" />
+          <img src="images/normal_images/blackBlue.jpg" id="img6-airPods" />
+
+          <div class="caption">
+            <h4>Awesome Image</h4>
+            <p id="p-pc6">PC</p>
+            <p id="p-phone6">Phones</p>
+            <p id="p-smartWatch6">SmartWatches</p>
+            <p id="p-airPods6">AirPods</p>
+          </div>
+        </div>
+        <!-- img 7 -->
+        <div class="box">
+          <img src="images/normal_images/black.jpg" id="img7-pc" />
+          <img src="images/normal_images/blackBlue.jpg" id="img7-phone" />
+          <img src="images/normal_images/black.jpg" id="img7-smartWatch" />
+          <img src="images/normal_images/blackBlue.jpg" id="img7-airPods" />
+
+          <div class="caption">
+            <h4>Awesome Image</h4>
+            <p id="p-pc7">PC</p>
+            <p id="p-phone7">Phones</p>
+            <p id="p-smartWatch7">SmartWatches</p>
+            <p id="p-airPods7">AirPods</p>
+          </div>
+        </div>
+        <!-- img 8 -->
+        <div class="box">
+          <img src="images/normal_images/black.jpg" id="img8-pc" />
+          <img src="images/normal_images/blackBlue.jpg" id="img8-phone" />
+          <img src="images/normal_images/black.jpg" id="img8-smartWatch" />
+          <img src="images/normal_images/blackBlue.jpg" id="img8-airPods" />
+
+          <div class="caption">
+            <h4>Awesome Image</h4>
+            <p id="p-pc8">PC</p>
+            <p id="p-phone8">Phones</p>
+            <p id="p-smartWatch8">SmartWatches</p>
+            <p id="p-airPods8">AirPods</p>
+          </div>
+        </div>
+      </div>
+      <a href="#" class="more">more</a>
+    </div>
+    <!-- end portfolio section -->
+    <!-- start video section -->
+    <div class="video">
+      <video autoplay muted loop>
+        <source src="videos/awesome-video.mp4" type="video/mp4" />
+      </video>
+      <div class="text">
+        <h2>super awesome video here</h2>
+        <p>Its all you need</p>
+        <button id="videoButton">See More!</button>
+      </div>
+    </div>
+    <!-- end video section -->
+    <!-- start about section -->
+    <div class="about" id="about">
+      <div class="container">
+        <div class="main-heading">
+          <h2>About Us</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto
+            ipsum, consequuntur nobis enim eaque dicta, illum, fugit iure esse
+            hic in voluptatum
+          </p>
+        </div>
+        <img src="images/normal_images/about.png" alt="AboutUs" />
+      </div>
+    </div>
+    <!-- end about section -->
+    <!-- start statis section -->
+    <div class="stats">
+      <div class="container">
+        <div class="box">
+          <i class="fa-solid fa-laptop fa-3x"></i>
+          <div class="number" data-goal="29">0</div>
+          <p>PC</p>
+        </div>
+        <!--  -->
+        <div class="box">
+          <i class="fa-solid fa-mobile-screen-button fa-3x"></i>
+          <div class="number" data-goal="55">0</div>
+          <p>Phones</p>
+        </div>
+        <!--  -->
+        <div class="box">
+          <i class="fa-solid fa-clock fa-3x"></i>
+          <div class="number" data-goal="98">0</div>
+          <p>SmartWatches</p>
+        </div>
+        <!--  -->
+        <div class="box">
+          <i class="fa-solid fa-headphones fa-3x"></i>
+          <div class="number" data-goal="112">0</div>
+          <p>AirPods</p>
+        </div>
+      </div>
+    </div>
+    <!-- end stats section -->
+    <!-- start special section -->
+    <div class="special">
+      <div class="container">
+        <div class="bestCustomers">
+          <h3>Our Best Customers</h3>
+          <p>
+            Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem.
+            Mauris blandit aliquet elit, eget tincidunt.
+          </p>
+          <!-- content -->
+          <div class="content">
+            <img src="images/normal_images/customer1.jpg" alt="" id="client1" />
+            <div class="text">
+              <span id="pOne"
+                >Hello Customers! Do you know that you are a special customers?
+                yes ofc you are, and by the way you are the 'TOP'.
+              </span>
+              <p id="nameOne">John Wick, CEO</p>
+            </div>
+          </div>
+          <!--  -->
+          <div class="content">
+            <img
+              src="images/normal_images/customer2.jpg"
+              alt=""
+              id="client1_1"
+            />
+            <div class="text">
+              <span id="pTwo">
+                Hello Customers! Do you know that you are a special customers?
+                yes ofc you are, and by the way you are the 'TOP'.</span
+              >
+              <p id="nameTwo">Tonny Soprano, CEO</p>
+            </div>
+          </div>
+          <!--  -->
+          <ul class="bullets">
+            <li id="firstB"></li>
+            <li id="mainB" class="active"></li>
+            <li id="lastB"></li>
+          </ul>
+        </div>
+        <!-- ** -->
+        <div class="websiteBy">
+          <h3>Website By</h3>
+          <p>
+            Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem.
+            Mauris blandit aliquet elit, eget tincidunt.
+          </p>
+          <!-- progress holder -->
+          <div class="prog-holder">
+            <h4>Adobe</h4>
+            <div class="prog">
+              <span style="width: 90%" data-progress="90%"></span>
+            </div>
+          </div>
+          <!--  -->
+          <div class="prog-holder">
+            <h4>HTML&CSS</h4>
+            <div class="prog">
+              <span style="width: 80%" data-progress="80%"></span>
+            </div>
+          </div>
+          <!--  -->
+          <div class="prog-holder">
+            <h4>JS</h4>
+            <div class="prog">
+              <span style="width: 70%" data-progress="70%"></span>
+            </div>
+          </div>
+          <!--  -->
+          <div class="prog-holder">
+            <h4>OtherThings</h4>
+            <div class="prog">
+              <span style="width: 60%" data-progress="60%"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end special section -->
+    <!-- start quote section -->
+    <div class="quote">
+      <div class="container">
+        <q>
+          Remember, every 'Mistake' your customer makes, it's not because
+          they're stupid. It's because your website sucks
+        </q>
+        <span>No One</span>
+      </div>
+    </div>
+    <!-- end quote section -->
+    <!-- start pricing section -->
+    <div class="pricing" id="pricing">
+      <div class="container">
+        <div class="main-heading">
+          <h2>Pricing</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto
+            ipsum, consequuntur nobis enim eaque dicta, illum, fugit iure esse
+            hic in voluptatum
+          </p>
+        </div>
+        <!-- plans -->
+        <div class="plans">
+          <!-- plan 1 -->
+          <div class="plan">
+            <div class="head">
+              <h3>Basic</h3>
+              <span>17</span>
+            </div>
+            <ul>
+              <li>Feature N1</li>
+              <li>Feature N2</li>
+              <li>Feature N3</li>
+              <li>Extra Feature</li>
+            </ul>
+            <div class="foot">
+              <a href="#">Buy Now</a>
+            </div>
+          </div>
+          <!-- plan 2 -->
+          <div class="plan">
+            <div class="head">
+              <h3>Premium</h3>
+              <span>27</span>
+            </div>
+            <ul>
+              <li>Feature N1</li>
+              <li>Feature N2</li>
+              <li>Feature N3</li>
+              <li>Extra Feature</li>
+            </ul>
+            <div class="foot">
+              <a href="#">Buy Now</a>
+            </div>
+          </div>
+          <!-- plan 3 -->
+          <div class="plan">
+            <div class="head">
+              <h3>Pro</h3>
+              <span>37</span>
+            </div>
+            <ul>
+              <li>Feature N1</li>
+              <li>Feature N2</li>
+              <li>Feature N3</li>
+              <li>Extra Feature</li>
+            </ul>
+            <div class="foot">
+              <a href="#">Buy Now</a>
+            </div>
+          </div>
+          <!-- plan 4 -->
+          <div class="plan">
+            <div class="head">
+              <h3>Platinum</h3>
+              <span>47</span>
+            </div>
+            <ul>
+              <li>Feature N1</li>
+              <li>Feature N2</li>
+              <li>Feature N3</li>
+              <li>Extra Feature</li>
+            </ul>
+            <div class="foot">
+              <a href="#">Buy Now</a>
+            </div>
+          </div>
+        </div>
+        <!-- p -->
+        <p class="contactText">Contact us if you have a request!</p>
+        <a href="#" class="contactLink">Contact Us</a>
+      </div>
+    </div>
+    <!-- end pricing section -->
+    <!-- start subscribe section -->
+    <div class="subscribe">
+      <div class="container">
+        <form action="">
+          <i class="fa-regular fa-envelope"></i>
+          <input type="email" name="mail" placeholder="Your Email" />
+          <input type="submit" value="Subscribe" />
+        </form>
+        <p>
+          Dear Customer, If you want to keep us in touch by sending to you our
+          news, our new features, etc. Give us your email and w'll contact you
+        </p>
+      </div>
+    </div>
+    <!-- end subscribe section -->
+    <!-- start contact section -->
+    <div class="contact" id="contact">
+      <div class="container">
+        <div class="main-heading">
+          <h2>Contact Us</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto
+            ipsum, consequuntur nobis enim eaque dicta, illum, fugit iure esse
+            hic in voluptatum
+          </p>
+        </div>
+        <!--  -->
+        <div class="content">
+          <form action="" id="myForm">
+            <input
+              type="text"
+              name="name"
+              id="inptName"
+              class="mainInput"
+              placeholder="Your Name"
+            />
+            <label
+              id="lName"
+              style="
+                position: relative;
+                top: -30px;
+                color: red;
+                font-size: 14px;
+                font-weight: light;
+              "
+            ></label>
+            <input
+              type="text"
+              name="email"
+              id="inptEmail"
+              class="mainInput"
+              placeholder="Your Email"
+            />
+            <label
+              id="lEmail"
+              style="
+                position: relative;
+                top: -30px;
+                color: red;
+                font-size: 14px;
+                font-weight: light;
+              "
+            ></label>
+            <textarea
+              name="message"
+              class="mainInput"
+              placeholder="Your Message"
+              id="txtArea"
+            ></textarea>
+            <label
+              id="lTxtArea"
+              style="
+                position: relative;
+                top: -30px;
+                color: red;
+                font-size: 14px;
+                font-weight: light;
+              "
+            ></label>
+            <input type="submit" value="Send" id="inptSend" />
+          </form>
+          <!--  -->
+          <div class="info">
+            <div class="one">
+              <h4>Get In Touch</h4>
+              <span class="phone">+00 123 456 789</span>
+              <span class="phone">+00 123 456 789</span>
+            </div>
+            <!--  -->
+            <div class="two">
+              <h4>Where Are We?</h4>
+              <address>
+                Address Address 17 <br />
+                New York, NYC <br />
+                123-4567-890 <br />
+                USA
+              </address>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end contact section -->
+    <!-- start footer section -->
+    <div class="footer">
+      <div class="container">
+        <img src="images/small_images/logo_page.png" alt="Logo" />
+        <p>We Are Social</p>
+        <div class="socialIcons">
+          <a href="https://www.facebook.com/soufiane.elfaquir" target="_blank"
+            ><i class="fa-brands fa-facebook-f"></i
+          ></a>
+          <a href="https://www.instagram.com/soufiane_elfqr/" target="_blank"
+            ><i class="fa-brands fa-instagram"></i
+          ></a>
+          <a href="https://twitter.com/Ssoufiane17" target="_blank"
+            ><i class="fa-brands fa-twitter"></i
+          ></a>
+          <a
+            href="https://www.linkedin.com/in/soufiane-el-faquir-877575228/"
+            target="_blank"
+            ><i class="fa-brands fa-linkedin"></i
+          ></a>
+        </div>
+        <p class="copyright">
+          &copy; 2022 <span>e-commerce</span> All Rights Reserved
+        </p>
+      </div>
+    </div>
+    <!-- end footer section -->
+    <!-- main js file -->
+    <script src="js.js"></script>
+  </body>
+</html>

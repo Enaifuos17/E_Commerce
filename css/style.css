@@ -1,0 +1,1818 @@
+/* class about the searchIcon */
+.class-test {
+  display: block !important;
+  /* bash display li dayr (none) matb9sh twlii hadi hiya li important 3liiha */
+}
+
+/* start colors var */
+
+:root {
+  --b0: #22a4cc;
+  --b1: #00b4d8;
+  --b2: #90e0ef;
+  --b3: #caf0f8;
+  --b4: #86c6f4;
+  --b5: #39cccc;
+  --b6: #7fdbff;
+  /*  */
+  --g1: #d1d1d1;
+  --g2: #6e6e6e;
+  --g3: #636161;
+  --g4: #ddd;
+  --g5: #eee;
+  --g6: #aaa;
+  /*  */
+  --section-padding: 100px;
+}
+
+/* end colors var */
+
+/* start global rules */
+
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Source Sans Pro", sans-serif;
+  /* background-color: #000; */
+  /* height: 5000px; */
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* end global rules */
+
+/* --- --- --- */
+
+/* start responsive stuff */
+
+/* small */
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+
+/* medium */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+
+/* large */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+
+/* end responsive stuff */
+
+/* --- --- --- */
+
+/* start header */
+
+header .container a.logo img {
+  width: 50px;
+  transition: 0.4s linear;
+  filter: grayscale(100%);
+}
+
+/* simple hover on the logo */
+header .container a.logo img:hover {
+  transform: scale(1.15);
+  filter: grayscale(0);
+}
+
+header {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  z-index: 2;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* relative => aya element mn pstn absolute li tmaa ykun parent dylha relative o matl3sh brra mn container */
+  position: relative;
+  /* height of the header => for the phone view */
+  min-height: 98.25px;
+}
+
+header .container::after {
+  content: "";
+  position: absolute;
+  height: 1px;
+  background-color: var(--g4);
+  bottom: 0;
+  width: calc(100% - 30px);
+  /* 30 px => padding */
+  left: 15px;
+  /* write to understand */
+  opacity: 0.6;
+}
+
+header .container nav {
+  flex: 1;
+  /* bash nav takhd all the space (the rest)*/
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+/* menu-responsive */
+header .container nav .menu {
+  color: #fff;
+  font-size: 22px;
+}
+
+@media (min-width: 768px) {
+  header .container nav .menu {
+    display: none;
+  }
+}
+
+header .container nav ul {
+  display: flex;
+}
+
+/*  */
+@media (max-width: 767px) {
+  header .container nav ul {
+    display: none;
+  }
+
+  header .container nav .menu:hover + ul {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #000;
+    opacity: 0.5;
+  }
+
+  header .container nav .menu:hover + ul li a {
+    padding: 15px;
+  }
+
+  header .container a.logo img {
+    width: 40px;
+  }
+}
+
+/*  */
+header .container nav ul li a {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  font-size: 15px;
+  letter-spacing: 1px;
+  transition: 0.3s;
+  padding: 40px 15px;
+  /*  */
+  position: relative;
+  z-index: 2;
+  /* bash yji fuu9 dak elAfter (line) */
+  border-bottom: 1px solid rgba(221, 221, 221, 0.15);
+}
+
+/* header .container nav ul li a.active, */
+header .container nav ul li a:hover {
+  color: var(--b1);
+  border-bottom: 1px solid var(--b1);
+}
+
+header .container nav .search {
+  width: 40px;
+  height: 30px;
+  position: relative;
+  margin-left: 30px;
+  border-left: 1px solid white;
+}
+
+header .container nav .search i {
+  position: absolute;
+  font-size: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
+  cursor: pointer;
+  opacity: 0.6;
+  transition: 0.3s;
+  color: #fff;
+}
+
+header .container nav .search i:hover {
+  opacity: 1;
+}
+
+/* end header */
+
+/* --- --- --- */
+/* --- --- --- */
+/* --- --- --- */
+
+/* start landing section */
+
+.landing {
+  min-height: 100vh;
+  /* background-color: var(--g3); */
+  background-image: url(../images/normal_images/pic2.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  transition: 0.2s linear;
+}
+
+.landing .overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.landing .text {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50%;
+  padding: 50px;
+  background-color: #63616183;
+  color: #fff;
+  border-radius: 4px;
+  /*  */
+  display: flex;
+  justify-content: flex-end;
+  /*  */
+  border-bottom: 3px solid var(--b1);
+  /*  */
+  transition: 0.4s linear;
+}
+
+/* responsive stuff */
+@media (max-width: 767px) {
+  .landing .text {
+    width: 100%;
+  }
+
+  .landing .text .content-one,
+  .landing .text .content-two,
+  .landing .text .content-three {
+    max-width: 100%;
+  }
+}
+
+.landing .text .content-one h2 .one,
+.landing .text .content-two h2 .one,
+.landing .text .content-three h2 .one {
+  font-size: 40px;
+  font-weight: normal;
+  letter-spacing: 1px;
+  line-height: 1.5;
+}
+
+.landing .text .content-one h2 .two,
+.landing .text .content-two h2 .two,
+.landing .text .content-three h2 .two {
+  font-size: 30px;
+  font-weight: normal;
+}
+
+.landing .text .content-one h2,
+.landing .text .content-two h2,
+.landing .text .content-three h2 {
+  margin-bottom: 20px;
+}
+
+.landing .text .content-one p,
+.landing .text .content-two p,
+.landing .text .content-three p {
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+.landing .change-background {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #fff;
+}
+
+/* responsive */
+
+@media (max-width: 767px) {
+  .landing .change-background {
+    display: none;
+  }
+}
+
+/*  */
+
+.landing .fa-angle-left {
+  left: 15px;
+  opacity: 0.7;
+  cursor: pointer;
+  transition: 0.2s linear;
+  /* display: none; */
+}
+
+.landing .fa-angle-right {
+  right: 15px;
+  opacity: 0.6;
+  cursor: pointer;
+  transition: 0.2s linear;
+}
+
+.landing .fa-angle-left:hover,
+.landing .fa-angle-right:hover {
+  opacity: 1;
+}
+
+.landing .bullets-section {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 40px;
+  display: flex;
+}
+
+.landing .bullets-section {
+  bottom: 120px;
+}
+
+.landing .bullets-section li {
+  width: 20px;
+  height: 20px;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  margin-right: 5px;
+  margin-left: 5px;
+  cursor: pointer;
+  /*  */
+  transition: 0.3s linear;
+}
+
+/* .landing .bullets-section li {
+  width: 15px;
+  height: 15px;
+} */
+
+.landing .bullets li:hover,
+.landing .bullets-section li:hover {
+  background-color: var(--b1);
+  border-color: var(--b1);
+}
+
+.landing .bullets li.active,
+.landing .bullets-section li.active {
+  background-color: var(--b1);
+  border-color: var(--b1);
+}
+
+/* UP button */
+.landing .button {
+  position: fixed;
+  right: 0;
+  margin-right: 10px;
+  bottom: 10px;
+  z-index: 99;
+}
+
+.landing .button button {
+  padding: 5px;
+  border-radius: 5px;
+  border: none;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-style: italic;
+  font-size: 20px;
+  border-bottom: 3px solid var(--b1);
+  cursor: pointer;
+  opacity: 0.6;
+  transition: 0.3s linear;
+  /* display: none; */
+  display: block;
+}
+
+.landing .button button:hover {
+  opacity: 1;
+}
+
+/* ====== */
+.landing .text .content-one {
+  display: none;
+}
+
+.landing .text .content-two {
+  display: block;
+}
+
+.landing .text .content-one,
+.landing .text .content-two {
+  transition: 0.3s;
+}
+
+/* ====== */
+/* end landing section */
+
+/*  */
+/* input next to the searchIcon */
+
+.search .input-button {
+  display: none;
+}
+
+.search input {
+  /* display: none; */
+  margin-left: -260px;
+  margin-top: 70px;
+  border-radius: 5px;
+  padding: 5px;
+  border: none;
+  outline: none;
+  transition: 0.5s;
+  width: 300px;
+  height: 30px;
+  /* text-align: center; */
+  font-size: 17px;
+  /*  */
+  background-color: transparent;
+  border-bottom: 2px solid rgba(170, 170, 170, 0.596);
+  color: #fff;
+}
+
+.search input::placeholder {
+  font-size: 16px;
+  letter-spacing: 3px;
+  color: var(--g6);
+}
+
+.search .search-button {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  border-radius: 5px;
+  padding: 5px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  background-color: var(--g1);
+  transition: 0.5s;
+  border-left: 8px solid var(--b1);
+  border-right: 8px solid var(--b1);
+  opacity: 0.7;
+}
+
+/* .search .file-button {
+  background-color: red;
+  color: #000;
+} */
+
+.search .search-button:hover {
+  border-left: 8px solid var(--b1);
+  border-right: 8px solid var(--b1);
+  opacity: 1;
+}
+
+/* media */
+
+@media (max-width: 767px) {
+  .search .search-button {
+    margin-left: -40px;
+  }
+
+  .landing .text {
+    margin-top: 30px;
+  }
+  .landing .bullets-section {
+    margin-bottom: -50px;
+  }
+}
+
+/*  */
+/*  */
+
+/* ------------------ */
+
+/* start products section */
+
+.products {
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+}
+
+.products .prd-box {
+  display: flex;
+  /* border: 1px solid #000; */
+}
+
+.products .prd-box i {
+  /* font-size: 40px; */
+  margin-right: 50px;
+  /* color: #000; */
+  /* opacity: 0.8; */
+}
+
+.products .prd-box h3 {
+  margin-bottom: 30px;
+  color: var(--b1);
+  font-family: fantasy;
+  letter-spacing: 2px;
+  font-weight: 300;
+}
+
+.products .prd-box p {
+  line-height: 1.5;
+  color: var(--g3);
+}
+
+/* media */
+
+@media (min-width: 768px) {
+  .products .products-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+    grid-column-gap: 40px;
+    grid-row-gap: 60px;
+  }
+}
+
+@media (max-width: 767px) {
+  .products .prd-box {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  .products .prd-box i {
+    margin: 0 0 20px;
+  }
+
+  .products .prd-box h3 {
+    margin-bottom: 20px;
+  }
+
+  .products .prd-box p {
+    margin-bottom: 20px;
+    line-height: 1.4;
+  }
+}
+
+/*  */
+
+/* end products section */
+
+/* -------------- */
+
+/* start design section  */
+
+.design {
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+  height: 450px;
+  position: relative;
+  background-image: url(../images/normal_images/background3.jpg);
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.design::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.design .image,
+.design .text {
+  position: relative;
+  z-index: 2;
+  flex: 1;
+}
+
+.design .image {
+  text-align: center;
+}
+
+.design .image img {
+  position: relative;
+  bottom: -160px;
+}
+
+.design .text {
+  color: #fff;
+  padding: 50px;
+  /* background-color: #77777786; */
+  background-color: rgba(99, 97, 97, 0.4);
+  border-end-start-radius: 30px;
+  border-top-left-radius: 30px;
+}
+
+.design .text h2 {
+  text-transform: uppercase;
+  font-weight: 400;
+  margin-bottom: 20px;
+  font-size: 26px;
+}
+
+.design .text ul li {
+  padding: 8px 0;
+  /* opacity: 0.9; */
+}
+
+.design .text ul li::before {
+  font-family: "Font Awesome 5 Free";
+  content: "\f390";
+  font-weight: 900;
+  margin-right: 10px;
+  /* bantliya icons shwiya tal3a so bghit nhbtHa shwiya */
+  position: relative;
+  top: 1px;
+}
+
+/* media design section (remove the pic on the mobile view) */
+
+@media (max-width: 1067px) {
+  .design .image {
+    display: none;
+  }
+
+  .design .text h2 {
+    font-size: 22px;
+  }
+
+  .design .text {
+    background-color: rgba(99, 97, 97, 0.5);
+    border-radius: 0;
+  }
+}
+
+/* end design section  */
+
+/* ======================== */
+
+/* start portfolio */
+
+.portfolio {
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+}
+
+.portfolio .shuffle {
+  display: flex;
+  justify-content: center;
+}
+
+.portfolio .shuffle li {
+  padding: 10px;
+  transition: 0.3s;
+  cursor: pointer;
+  margin-right: 3px;
+  border-radius: 5px;
+}
+
+.portfolio .shuffle li.active {
+  background-color: var(--b1);
+  color: #fff;
+}
+
+/* hover on li (shuffle) */
+
+.portfolio .shuffle li:hover {
+  background-color: var(--b1) !important;
+  color: #fff !important;
+  /* !important ==> htsh mnin kancliki o katrj3 w7da fiha l3iba, lakhra makatb9sh yban fiha lhover */
+}
+
+.portfolio .pics-container {
+  display: flex;
+  flex-wrap: wrap;
+  /* ila shi l3iiba dazt container tnzl t7t */
+  margin-top: 60px;
+}
+
+.portfolio .pics-container .box {
+  position: relative;
+  overflow: hidden;
+}
+
+.portfolio .pics-container .box img {
+  /* bash images maytl3ush brra */
+  max-width: 100%;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+/* respnsv about images */
+
+@media (min-width: 768px) {
+  .portfolio .pics-container .box {
+    flex-basis: 50%;
+  }
+}
+
+@media (min-width: 1199px) {
+  .portfolio .pics-container .box {
+    flex-basis: 25%;
+  }
+}
+/* --- */
+
+.portfolio .pics-container .box .caption {
+  position: absolute;
+  left: 0;
+  padding: 20px;
+  background-color: #fff;
+  width: 100%;
+  transition: 0.3s;
+  bottom: -100%;
+  /* bottom -100% ==> bash tmshi lt7t ga3 o drna f box HIDDEN bash matb9sh tbaan */
+}
+
+/* hover 3la box */
+
+.portfolio .pics-container .box:hover .caption {
+  bottom: 0;
+  /* mnin hover 3la box caption ghadi tbaan bcs the bottom ll be 0 */
+}
+
+.portfolio .pics-container .box:hover img {
+  transform: rotate(3deg) scale(1.1);
+}
+/* end box hover */
+
+.portfolio .pics-container .box .caption h4 {
+  font-weight: normal;
+  margin-bottom: 10px;
+}
+
+.portfolio .pics-container .box .caption p {
+  color: var(--b1);
+}
+
+/* more link */
+
+.portfolio .more {
+  text-transform: uppercase;
+  background-color: var(--b1);
+  color: #fff;
+  padding: 15px 20px;
+  display: block;
+  width: fit-content;
+  margin: 30px auto;
+  text-decoration: none;
+  transition: 0.3s linear;
+  border: 1px solid;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.portfolio .more:hover {
+  background-color: #fff;
+  color: var(--b1);
+  border: 1px solid var(--b1);
+}
+
+/* ABOUT THE SHUFFLE EFFECT (CHANGE THE PIC) */
+
+.portfolio .pics-container #p-phone1,
+.portfolio .pics-container #p-phone2,
+.portfolio .pics-container #p-phone3,
+.portfolio .pics-container #p-phone4,
+.portfolio .pics-container #p-phone5,
+.portfolio .pics-container #p-phone6,
+.portfolio .pics-container #p-phone7,
+.portfolio .pics-container #p-phone8,
+.portfolio .pics-container #p-smartWatch1,
+.portfolio .pics-container #p-smartWatch2,
+.portfolio .pics-container #p-smartWatch3,
+.portfolio .pics-container #p-smartWatch4,
+.portfolio .pics-container #p-smartWatch5,
+.portfolio .pics-container #p-smartWatch6,
+.portfolio .pics-container #p-smartWatch7,
+.portfolio .pics-container #p-smartWatch8,
+.portfolio .pics-container #p-airPods1,
+.portfolio .pics-container #p-airPods2,
+.portfolio .pics-container #p-airPods3,
+.portfolio .pics-container #p-airPods4,
+.portfolio .pics-container #p-airPods5,
+.portfolio .pics-container #p-airPods6,
+.portfolio .pics-container #p-airPods7,
+.portfolio .pics-container #p-airPods8 {
+  display: none;
+}
+
+/* imgs display */
+
+.portfolio .pics-container #img1-phone,
+.portfolio .pics-container #img2-phone,
+.portfolio .pics-container #img3-phone,
+.portfolio .pics-container #img4-phone,
+.portfolio .pics-container #img5-phone,
+.portfolio .pics-container #img6-phone,
+.portfolio .pics-container #img7-phone,
+.portfolio .pics-container #img8-phone,
+.portfolio .pics-container #img1-smartWatch,
+.portfolio .pics-container #img2-smartWatch,
+.portfolio .pics-container #img3-smartWatch,
+.portfolio .pics-container #img4-smartWatch,
+.portfolio .pics-container #img5-smartWatch,
+.portfolio .pics-container #img6-smartWatch,
+.portfolio .pics-container #img7-smartWatch,
+.portfolio .pics-container #img8-smartWatch,
+.portfolio .pics-container #img1-airPods,
+.portfolio .pics-container #img2-airPods,
+.portfolio .pics-container #img3-airPods,
+.portfolio .pics-container #img4-airPods,
+.portfolio .pics-container #img5-airPods,
+.portfolio .pics-container #img6-airPods,
+.portfolio .pics-container #img7-airPods,
+.portfolio .pics-container #img8-airPods {
+  display: none;
+}
+
+/* end portfolio section */
+
+/* ======================== */
+/* ======================== */
+/* ======================== */
+
+/* start video section */
+
+.video {
+  position: relative;
+}
+
+.video::before {
+  /* ------ */
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0 0 0 / 40%);
+}
+
+.video video {
+  width: 100%;
+}
+
+.video .text {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 50px;
+  background-color: var(--b0);
+  background-color: #6e6e6e92;
+  /* opacity: 0.8; */
+  color: #fff;
+  text-align: center;
+}
+
+.video .text h2 {
+  margin: 0 0 30px;
+  /* 30px -> marginBottom */
+  text-transform: uppercase;
+  font-weight: normal;
+  letter-spacing: 2px;
+}
+
+.video .text p {
+  margin-bottom: 30px;
+  text-transform: capitalize;
+  word-spacing: 2px;
+}
+
+.video .text button {
+  text-transform: uppercase;
+  background-color: #000;
+  color: #fff;
+  padding: 10px 20px;
+  transition: 0.3s linear;
+  border-radius: 5px;
+  cursor: pointer;
+  /* border: none; */
+  border: 1px solid #000;
+}
+
+.video .text button:hover {
+  background-color: transparent;
+  border: 1px solid var(--g3);
+}
+
+/* some responsive stuff for the video section */
+@media (max-width: 1067px) {
+  .video .text h2 {
+    letter-spacing: normal;
+    font-size: 17px;
+    margin: 0 0 15px;
+  }
+
+  .video .text p {
+    word-spacing: normal;
+    margin: 0 0 15px;
+  }
+
+  .video .text button {
+    font-size: 14px;
+    padding: 8px 10px;
+  }
+}
+/* ----- */
+
+/* end video section */
+
+/* ---------- */
+
+/* start about section */
+
+.about {
+  padding-top: var(--section-padding);
+  overflow: hidden;
+  text-align: center;
+}
+
+.about img {
+  position: relative;
+  bottom: -120px;
+  margin-top: -120px;
+  /* drna bottom -120px bash thbt img o t9t3 o tban kima bghina */
+  /* mnin drna bottom, space mn lfu9 katzaaad, so drna margin-top (SAME VALUE AS THE BOTTOM VALUE) */
+  max-width: 100%;
+  /* bash matfutsh content dyl screen li hiya fiiha */
+}
+
+/* responsv */
+@media (max-width: 767px) {
+  .about img {
+    bottom: -60px;
+    margin-top: -60px;
+  }
+}
+
+/* end about section */
+
+/* ---------- */
+
+/* start stats section */
+
+.stats {
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+  text-align: center;
+  background-image: url("../images/normal_images/bgImage.png");
+  background-size: cover;
+  position: relative;
+}
+
+.stats::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0 0 0 / 60%);
+}
+
+.stats .container {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.stats .container .box {
+  padding: 50px;
+  color: #fff;
+  background-color: rgb(15 116 143 / 70%);
+}
+
+/* respnsv ------ */
+
+@media (max-width: 767px) {
+  .stats .container .box {
+    flex-basis: 100%;
+  }
+}
+
+/* nishaaan after the PHONE MODE  */
+@media (min-width: 768px) {
+  .stats .container .box {
+    flex-basis: 50%;
+  }
+}
+
+/* mn 992 o netaaa zayd ghadi ywliiw l3ibat 4   */
+@media (min-width: 992px) {
+  .stats .container .box {
+    flex-basis: 25%;
+  }
+}
+
+/* -------- */
+
+.stats .container .box i {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  background-color: #000;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  margin: 0 auto 30px;
+  /*  */
+  font-size: 20px;
+}
+
+.stats .container .box .number {
+  font-size: 50px;
+  font-weight: 700;
+  margin: 0 0 20px;
+}
+
+.stats .container .box p {
+  font-size: 14px;
+  letter-spacing: 2px;
+}
+
+/* end stats section */
+
+/* ------------------- */
+
+/* start special section */
+
+.special {
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+}
+
+.special .container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  /* wrap => bash ila dya9t space yhbt lt7t (try to kw) */
+}
+
+/* respnsv */
+@media (min-width: 992px) {
+  /* DIRECT DIV */
+  /* bestCustomers && websiteBy */
+  .special .container > div {
+    flex-basis: 45%;
+  }
+}
+/* ------- */
+
+.special .container > div > h3 {
+  /* h3 li kayn f divS ra2issiyin (h3 dyl besCus & h3 dyl websiteBy) */
+  margin: 0 0 30px;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 20px;
+}
+
+.special .container > div > p {
+  /* p li kayn f div bestC.. & div websiteBy */
+  color: #777;
+  text-align: center;
+  margin-bottom: 60px;
+  line-height: 1.5;
+  font-size: 15px;
+}
+
+.special .container .bestCustomers .content {
+  display: flex;
+  margin-bottom: 30px;
+  align-items: center;
+}
+
+.special .container .bestCustomers .content img {
+  width: 100px;
+  /* 3tit ghi width (htsh assln img 3ndi 9d width 9d height) */
+  border-radius: 50%;
+  margin-right: 50px;
+}
+
+/* respnsv */
+/* phone view */
+@media (max-width: 767px) {
+  .special .container .bestCustomers .content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .special .container .bestCustomers .content img {
+    margin: 0 auto 15px;
+    /* to center our img in the phoneView */
+  }
+
+  .special .container > div > h3 {
+    margin: 0 0 20px;
+    font-size: 22px;
+  }
+
+  .special .container > div > p {
+    line-height: 1.4;
+    font-size: 14px;
+  }
+
+  .special .container .bestCustomers .text {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  .special .container .bestCustomers .content {
+    margin-bottom: 60px;
+  }
+}
+/* ------- */
+
+.special .container .bestCustomers .text {
+  line-height: 1.6;
+  border-bottom: 1px solid var(--g6);
+}
+
+.special .container .bestCustomers .text p {
+  color: #777;
+  text-align: right;
+  font-size: 14.5px;
+  margin-bottom: 5px;
+}
+
+.special .container .bestCustomers .bullets {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.special .container .bestCustomers .bullets li {
+  width: 14px;
+  height: 14px;
+  border: 1px solid #aaa;
+  border-radius: 50%;
+  margin-right: 10px;
+  cursor: pointer;
+  transition: 0.3s linear;
+}
+
+.special .container .bestCustomers .bullets li:hover {
+  background-color: var(--b1) !important;
+  border-color: var(--b1) !important;
+}
+
+.special .container .bestCustomers .bullets li.active {
+  background-color: var(--b1);
+  border-color: var(--b1);
+}
+
+/* prog */
+
+.special .container .websiteBy .prog-holder {
+  margin-bottom: 40px;
+}
+
+.special .container .websiteBy .prog-holder h4 {
+  margin-bottom: 15px;
+  font-weight: normal;
+  text-transform: uppercase;
+}
+
+.special .container .websiteBy .prog-holder .prog {
+  /* .prog (DIV fiha SPAN) */
+  background-color: #dedadc;
+  height: 30px;
+  border-radius: 4px;
+}
+
+.special .container .websiteBy .prog-holder .prog span {
+  /* (just the SPAN) */
+  display: block;
+  background-color: var(--b1);
+  height: 100%;
+  position: relative;
+  /* htsh ghadi ndiru X% b pos absolute 3la dakshi khass ykun parent pos relative */
+  border-top-left-radius: 4px;
+  border-end-start-radius: 4px;
+}
+
+.special .container .websiteBy .prog-holder .prog span::before {
+  /* ghi bash yjibliya number li kayn fdak attribute */
+  /* mumkin tjib number blktaaba */
+  content: attr(data-progress);
+  position: absolute;
+  background-color: #000;
+  color: #fff;
+  top: -40px;
+  right: -18px;
+  width: 40px;
+  padding: 4px 0;
+  text-align: center;
+  border-radius: 4px;
+}
+
+.special .container .websiteBy .prog-holder .prog span::after {
+  content: "";
+  position: absolute;
+  border-style: solid;
+  border-color: black transparent transparent transparent;
+  border-width: 8px;
+  right: -8px;
+  top: -15px;
+}
+
+/* end special section */
+
+/* ---------------- */
+
+/* start quote section */
+
+.quote {
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+  background-image: url(../images/normal_images/background2.jpg);
+  background-size: cover;
+  position: relative;
+  text-align: center;
+  color: #fff;
+}
+
+.quote::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0 0 0 / 70%);
+}
+
+.quote .container {
+  position: relative;
+}
+
+.quote .container q::before {
+  font-family: "Font Awesome 5 Free";
+  content: "\f7ad";
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.quote .container q::after {
+  font-family: "Font Awesome 5 Free";
+  content: "\f7ad";
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.quote q {
+  font-size: 30px;
+  margin-bottom: 20px;
+  display: block;
+  /* block ==> bash thbt span lt7t */
+}
+
+.quote span {
+  font-size: 20px;
+  opacity: 0.7;
+}
+
+.quote span::before {
+  font-family: "Font Awesome 5 Free";
+  content: "\f6e2";
+  font-weight: 600;
+  margin-right: 5px;
+  font-size: 16px;
+}
+
+.quote span::after {
+  font-family: "Font Awesome 5 Free";
+  content: "\f6e2";
+  font-weight: 600;
+  margin-left: 5px;
+  font-size: 16px;
+}
+
+/* end quote section */
+
+/* ------------------------ */
+
+/* start pricing section */
+
+.pricing {
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+}
+
+.pricing .plans {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  /* min 250px */
+  gap: 30px;
+  /* space btwn columns */
+}
+
+.pricing .plans .plan {
+  background-color: #f8f8f8;
+  text-align: center;
+  transition: 0.3s linear;
+}
+
+.pricing .plans .plan:hover {
+  transform: scale(1.1);
+}
+
+.pricing .plans .plan .head {
+  padding: 40px 20px;
+  border-top: 1px solid var(--b1);
+  border-bottom: 1px solid var(--b1);
+}
+
+.pricing .plans .plan .head h3 {
+  font-weight: normal;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.pricing .plans .plan .head span {
+  font-size: 60px;
+  font-weight: 600;
+  /* position: relative; */
+  /* bash n9adu dollar o /Mo */
+}
+
+.pricing .plans .plan .head span::before {
+  content: "$";
+  font-size: 20px;
+  font-family: sans-serif;
+  font-weight: normal;
+  position: relative;
+  top: -40px;
+  margin-right: 10px;
+}
+
+.pricing .plans .plan .head span::after {
+  content: "/Mo";
+  font-size: 20px;
+  font-family: sans-serif;
+  font-weight: normal;
+  position: relative;
+  margin-left: 10px;
+}
+
+.pricing .plans .plan ul {
+  border-bottom: 1px solid var(--b1);
+}
+
+.pricing .plans .plan ul li {
+  padding: 20px;
+  position: relative;
+  /* had postion relative baghyinha ghi 3la tlata lwlin, But its okey ila ta last li khdat had postion */
+}
+
+.pricing .plans .plan ul li:not(:last-child)::after {
+  /* :not(:last-child) ==> duk tlata lwliiin (3ndi four li, kamlin mn ghir last one)*/
+  content: "";
+  width: 100px;
+  height: 1px;
+  /* 1px same as the border's height */
+  position: absolute;
+  background-color: var(--b1);
+  left: 50%;
+  transform: translateX(-50%);
+  /* to center it */
+  bottom: 0;
+  /* bash ynzl l t7t */
+}
+
+.pricing .plans .plan .foot a {
+  display: block;
+  padding: 10px 20px;
+  text-decoration: none;
+  border: 1px solid var(--b1);
+  width: fit-content;
+  margin: 30px auto;
+  /* auto bash YTcenter */
+  color: #000;
+  /*  */
+  transition: 0.3s linear;
+  border-radius: 5px;
+}
+
+.pricing .plans .plan .foot a:hover {
+  /* transform: scale(1.1); */
+  background-color: var(--b1);
+  color: #fff;
+  border: 1px solid var(--b1);
+}
+
+.pricing .contactText {
+  text-align: center;
+  margin: 50px auto 20px;
+  font-size: 18px;
+}
+
+.pricing .contactLink {
+  display: block;
+  width: fit-content;
+  text-decoration: none;
+  margin: 20px auto;
+  background-color: var(--b1);
+  text-transform: uppercase;
+  color: #fff;
+  padding: 15px 30px;
+  transition: 0.3s linear;
+  /*  */
+  border: 1px solid;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.pricing .contactLink:hover {
+  background-color: #fff;
+  color: var(--b1);
+  border: 1px solid var(--b1);
+}
+
+/* end pricing section */
+
+/* ---------------------- */
+
+/* start subscribe section */
+
+.subscribe {
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+  background-image: url(../images/normal_images/nasa.jpg);
+  background-size: cover;
+  position: relative;
+  color: #fff;
+}
+
+.subscribe::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0 0 0 / 60%);
+}
+
+.subscribe .container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+/* respnsv  */
+/* mobileScreen o smallScreen baghi ndiir flex COLUMN bash ynzlu t7t b3dyathum */
+@media (max-width: 991px) {
+  .subscribe .container {
+    flex-direction: column;
+  }
+}
+/* ------ */
+
+.subscribe form {
+  display: flex;
+  /* bash input(email) o subscribe bttn ykunu 7da b3dyathum */
+  position: relative;
+  /* relative bash nt7km f icon later */
+  width: 500px;
+  max-width: 100%;
+  /* bash f smallScreen ytkhad width kaml */
+}
+
+.subscribe form i {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  /* to center it [Y] */
+  left: 25px;
+}
+
+.subscribe form input[type="email"] {
+  border: 1px solid #fff;
+  border-right: none;
+  background: none;
+  padding: 15px 15px 15px 60px;
+  caret-color: var(--b1);
+  /* color dyl CURSOR */
+  width: calc(100% - 130px);
+  color: #fff;
+}
+
+.subscribe form input[type="submit"] {
+  width: 130px;
+  background-color: var(--b1);
+  color: #fff;
+  padding: 10px 20px;
+  border: 1px solid #fff;
+  border-left: none;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: 0.2s linear;
+  opacity: 0.79;
+}
+
+.subscribe form input[type="submit"]:hover {
+  opacity: 1;
+}
+
+.subscribe form::placeholder {
+  color: #fff;
+}
+
+.subscribe form input[type="email"]:focus,
+.subscribe form input[type="submit"]:focus {
+  outline: none;
+}
+
+.subscribe p {
+  line-height: 1.7;
+  margin-left: 50px;
+}
+
+@media (max-width: 991px) {
+  .subscribe p {
+    margin: 30px 0 0;
+  }
+}
+
+/* end subscribe section */
+
+/* ----------------------------- */
+
+/* start contact section */
+
+.contact {
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+}
+
+.contact .content {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* respnsv content */
+@media (max-width: 767px) {
+  .contact .content {
+    flex-direction: column;
+  }
+}
+/* ------------------- */
+
+.contact .content form {
+  flex-basis: 70%;
+  /* ghatakhd f width 70% MN CONTAINER */
+}
+
+.contact .content form .mainInput {
+  padding: 20px;
+  display: block;
+  /* bash tji kula input f LINE */
+  border: 1px solid #ccc;
+  margin-bottom: 30px;
+  width: 100%;
+  /* bash yakhdu width dyl form kaml */
+}
+
+.contact .content form textarea.mainInput {
+  height: 200px;
+}
+
+.contact .content form .mainInput:focus {
+  outline: none;
+}
+
+.contact .content form input[type="submit"] {
+  background-color: var(--b1);
+  color: #fff;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  transition: 0.3s linear;
+  /*  */
+  border: 1px solid;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  /*  */
+  display: flex;
+  margin-left: auto;
+  /* to move it TO THE LEFT */
+  cursor: pointer;
+}
+
+.contact .content form input[type="submit"]:hover {
+  background-color: #fff;
+  color: var(--b1);
+  border: 1px solid var(--b1);
+}
+
+.contact .content .info {
+  flex-basis: 25%;
+  /* f form 3tinaha 70% so db ba9a 30%, we will give to the info 25% and 5% ghadi tb9a binathum */
+}
+
+/* respnsv INFO */
+/* order -1 ===> bash INFO stuff yjiw huma lwlin 3ad form mn b3d */
+@media (max-width: 767px) {
+  .contact .content .info {
+    order: -1;
+    text-align: center;
+    display: flex;
+    justify-content: space-evenly;
+  }
+}
+/* ------ */
+
+.contact .content .info h4 {
+  text-transform: uppercase;
+  margin-bottom: 30px;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+/* respsnv h4 margin bottom */
+@media (max-width: 767px) {
+  .contact .content .info h4 {
+    margin-bottom: 10px;
+  }
+}
+/* -------------------- */
+
+.contact .content .info .phone {
+  display: block;
+  /* bash kula w7da tji f LINE (or u can use the <br>) */
+  color: #777;
+  margin-bottom: 5px;
+}
+
+/* mumkin ndiru ta lastChild bcs we have just TWO h4 */
+.contact .content .info h4:nth-of-type(2),
+.contact .content .info .two h4 {
+  margin-top: 85px;
+}
+/* !!!!!!!!! hnaya drrt had l3ibat, htsh flwl makansh 3ndi h4 lwl wsst wa7d div, o tani same thing
+    kan 3ndi dakshi bla DIV,
+    mais mnin bghit f mobileScreen ndiir duk TWO MAIN INFO 7da b3dyathum
+    drT kula info f div, so dak nth-of.. mab9ash khdaaam
+*/
+
+/* respnsv second h4 (marginTop yt7yd f mobileScreen) */
+@media (max-width: 767px) {
+  .contact .content .info h4:nth-of-type(2),
+  .contact .content .info .two h4 {
+    margin-top: 0px;
+  }
+}
+/* -------------- */
+
+.contact .content .info address {
+  color: #777;
+  line-height: 1.7;
+}
+
+/* respnsv address  */
+@media (max-width: 767px) {
+  .contact .content .info address {
+    margin-bottom: 30px;
+    line-height: normal;
+  }
+}
+/* --------- */
+
+/* end contact section */
+
+/* --------------------------- */
+
+/* start footer section */
+
+.footer {
+  padding-top: calc(var(--section-padding) / 2);
+  padding-bottom: calc(var(--section-padding) / 2);
+  /* ghi bghit n9ss mn padding */
+  /* mumkin nktbu nishan, maid b calc 7ssn bash ila shi mrra bdlt sectionPadding ghadi ytkhad nss dylu nishan */
+  background-image: url(../images/normal_images/nasa.jpg);
+  background-size: cover;
+  position: relative;
+  color: #fff;
+  text-align: center;
+}
+
+.footer::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0 0 0 / 70%);
+}
+
+.footer .container img {
+  width: 50px;
+  margin-bottom: 5px;
+  transition: 0.3s linear;
+  filter: grayscale(100%);
+  cursor: pointer;
+}
+
+.footer .container img:hover {
+  transform: scale(1.15);
+  filter: grayscale(0);
+}
+
+.footer .container {
+  position: relative;
+}
+
+.footer .container p:not(.copyright) {
+  /* mthd bash nkhtaru p li mafihash class copyright */
+  text-transform: uppercase;
+  letter-spacing: 1.8px;
+  font-weight: normal;
+  padding: 20px;
+  border-bottom: 2px solid #fff;
+  font-size: 22px;
+  width: fit-content;
+  /* bash border mayb9sh full screen */
+  margin: 20px auto;
+}
+
+.footer .socialIcons i {
+  padding: 10px 15px;
+  transition: 0.3s linear;
+  font-size: 20px;
+}
+
+.footer .socialIcons a {
+  text-decoration: none;
+  color: white;
+}
+
+.footer .socialIcons i:hover {
+  color: var(--b1);
+}
+
+.footer .copyright {
+  font-size: 17px;
+  margin-top: 60px;
+  letter-spacing: 1.6px;
+}
+
+/* respsnv */
+@media (max-width: 767px) {
+  .footer .copyright {
+    letter-spacing: normal;
+    font-size: 16px;
+  }
+
+  .footer .copyright span {
+    font-size: 17px;
+  }
+}
+/* ------------ */
+
+.footer .copyright span {
+  font-weight: 700;
+  color: var(--b1);
+  text-transform: uppercase;
+}
+
+/* end footer section */
