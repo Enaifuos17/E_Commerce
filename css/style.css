@@ -398,11 +398,16 @@ header .container nav .search i:hover {
 /* UP button */
 .landing .button {
   position: fixed;
-  right: 0;
-  margin-right: 10px;
+  right: 10px;
+  /* margin-right: 10px; */
   bottom: 10px;
   z-index: 99;
 }
+
+/* create a style for the class li ghadi nziduha l up button */
+/* .show-up-button {
+  right: 10px;
+} */
 
 .landing .button button {
   padding: 5px;
@@ -485,6 +490,7 @@ header .container nav .search i:hover {
   border-left: 8px solid var(--b1);
   border-right: 8px solid var(--b1);
   opacity: 0.7;
+  /*  */
 }
 
 /* .search .file-button {

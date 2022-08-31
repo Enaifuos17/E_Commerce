@@ -9,14 +9,15 @@ if (test === true) {
   window.onscroll = function () {
     if (window.scrollY > 600) {
       myBttn.style.display = "block";
+      // myBttn.classList.add("show-up-button");
     } else {
       myBttn.style.display = "none";
+      // myBttn.classList.remove("show-up-button");
     }
   };
   // create the function
   function up() {
     window.scrollTo({
-      left: 0,
       top: 0,
       behavior: "smooth",
     });
