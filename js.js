@@ -6,27 +6,6 @@ console.log(myBttn);
 // verify the button by CONSOLE
 
 if (test === true) {
-  window.onscroll = function () {
-    if (window.scrollY > 600) {
-      myBttn.style.display = "block";
-      // myBttn.classList.add("show-up-button");
-    } else {
-      myBttn.style.display = "none";
-      // myBttn.classList.remove("show-up-button");
-    }
-  };
-  // create the function
-  function up() {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
-  }
-
-  // apply the function
-  myBttn.onclick = function () {
-    up();
-  };
 }
 
 // --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
@@ -882,13 +861,33 @@ let started = false; // function started ? NO
 // num => just a name
 
 window.onscroll = function () {
+  // ! SCROLLING BUTTON
+  if (window.scrollY > 600) {
+    myBttn.style.display = "block";
+    // myBttn.classList.add("show-up-button");
+  } else {
+    myBttn.style.display = "none";
+    // myBttn.classList.remove("show-up-button");
+  }
   if (window.scrollY >= section.offsetTop - 120) {
     if (!started) {
-      // !started ==> started = false
+      // *started ==> started = false
       nums.forEach((num) => startCount(num));
     }
     started = true;
   }
+  // create the function
+  function up() {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  }
+
+  // apply the function
+  myBttn.onclick = function () {
+    up();
+  };
 };
 //
 
